@@ -364,23 +364,17 @@
       </div>
     </section>
 
-    <!-- Teaser image -->
+    <!-- Teaser statement -->
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <object class="paper-figure-pdf" data="static/images/1.pdf" type="application/pdf" aria-label="VT-DUDA overview figure">
-            <p>
-              Your browser cannot display this PDF figure.
-              <a href="static/images/1.pdf" target="_blank">Open Figure 1 PDF</a>.
-            </p>
-          </object>
           <h2 class="subtitle has-text-centered">
-            Figure 1. Overview of VT-DUDA. We jointly train domain-specific diffusion adapters and an image-to-token encoder on source and target images.
+            VT-DUDA uses instance-level visual tokens to enrich diffusion conditioning for unsupervised domain adaptation, enabling more useful labeled target-style data synthesis.
           </h2>
         </div>
       </div>
     </section>
-    <!-- End teaser image -->
+    <!-- End teaser statement -->
 
     <!-- Paper abstract -->
     <section class="section hero is-light">
@@ -422,15 +416,18 @@
                 During training, source samples are denoised using class prompts and source-image tokens, while target samples are denoised using a generic target prompt and target-image tokens. During generation, the model reuses the same token-augmented cross-attention format, pairing source class prompts with source-image tokens and synthesizing target-style images under the target-domain adapter branch.
               </p>
             </div>
-            <object class="paper-figure-pdf" data="static/images/1.pdf" type="application/pdf" aria-label="Overview of the VT-DUDA framework">
-              <p>
-                Your browser cannot display this PDF figure.
-                <a href="static/images/1.pdf" target="_blank">Open Figure 1 PDF</a>.
+
+            <div class="figure-card">
+              <object class="paper-figure-pdf" data="static/images/1.pdf" type="application/pdf" aria-label="Figure 1: VT-DUDA overview">
+                <p>
+                  Your browser cannot display this PDF figure.
+                  <a href="static/images/1.pdf" target="_blank">Open Figure 1 PDF</a>.
+                </p>
+              </object>
+              <p class="subtitle has-text-centered">
+                <strong>Figure 1.</strong> Overview of VT-DUDA. We jointly train domain-specific diffusion adapters and an image-to-token encoder on source and target images.
               </p>
-            </object>
-            <p class="subtitle has-text-centered">
-              Figure 1. Overview of VT-DUDA: image-to-token encoding, hybrid text-visual conditioning, target-style synthesis, and downstream UDA training.
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -521,64 +518,37 @@
     </section>
     <!-- End results summary -->
 
-    <!-- Results carousel -->
-    <section class="hero is-small is-light">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title is-3 has-text-centered">Visual Results</h2>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <object class="paper-figure-pdf-small" data="static/images/1.pdf" type="application/pdf" aria-label="VT-DUDA pipeline">
-                <p>
-                  Your browser cannot display this PDF figure.
-                  <a href="static/images/1.pdf" target="_blank">Open Figure 1 PDF</a>.
-                </p>
-              </object>
-              <h2 class="subtitle has-text-centered">
-                Figure 1. Overall pipeline of VT-DUDA.
-              </h2>
-            </div>
+    <!-- Additional paper figures -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Additional Visual Results</h2>
 
-            <div class="item">
-              <object class="paper-figure-pdf-small" data="static/images/2.pdf" type="application/pdf" aria-label="Token-strength scaling for target-style synthesis">
-                <p>
-                  Your browser cannot display this PDF figure.
-                  <a href="static/images/2.pdf" target="_blank">Open Figure 2 PDF</a>.
-                </p>
-              </object>
-              <h2 class="subtitle has-text-centered">
-                Figure 2. Token-strength scaling for target-style synthesis.
-              </h2>
-            </div>
+        <div class="figure-card">
+          <object class="paper-figure-pdf" data="static/images/2.pdf" type="application/pdf" aria-label="Figure 2: Token-strength scaling for target-style synthesis">
+            <p>
+              Your browser cannot display this PDF figure.
+              <a href="static/images/2.pdf" target="_blank">Open Figure 2 PDF</a>.
+            </p>
+          </object>
+          <p class="subtitle has-text-centered">
+            <strong>Figure 2.</strong> Token-strength scaling for target-style synthesis under Art → Clipart.
+          </p>
+        </div>
 
-            <div class="item">
-              <object class="paper-figure-pdf-small" data="static/images/3.pdf" type="application/pdf" aria-label="Token-subset manipulation under translation-based augmentation">
-                <p>
-                  Your browser cannot display this PDF figure.
-                  <a href="static/images/3.pdf" target="_blank">Open Figure 3 PDF</a>.
-                </p>
-              </object>
-              <h2 class="subtitle has-text-centered">
-                Figure 3. Token-subset manipulation under translation-based augmentation.
-              </h2>
-            </div>
-
-            <div class="item">
-              <object class="paper-figure-pdf-small" data="static/images/4.pdf" type="application/pdf" aria-label="t-SNE visualization on Office-Home">
-                <p>
-                  Your browser cannot display this PDF figure.
-                  <a href="static/images/4.pdf" target="_blank">Open Figure 4 PDF</a>.
-                </p>
-              </object>
-              <h2 class="subtitle has-text-centered">
-                Figure 4. t-SNE visualization of source, target, and generated target-style features.
-              </h2>
-            </div>
-          </div>
+        <div class="figure-card">
+          <object class="paper-figure-pdf" data="static/images/3.pdf" type="application/pdf" aria-label="Figure 3: Token-subset manipulation under translation-based augmentation">
+            <p>
+              Your browser cannot display this PDF figure.
+              <a href="static/images/3.pdf" target="_blank">Open Figure 3 PDF</a>.
+            </p>
+          </object>
+          <p class="subtitle has-text-centered">
+            <strong>Figure 3.</strong> Token-subset manipulation under translation-based augmentation for Real-World → Clipart.
+          </p>
         </div>
       </div>
     </section>
-    <!-- End results carousel -->
+    <!-- End additional paper figures -->
 
     <!-- Ablation and data-efficiency summary -->
     <section class="section">

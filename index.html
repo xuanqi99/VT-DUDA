@@ -97,32 +97,17 @@
   <script defer src="static/js/index.js"></script>
 
 
-  <!-- PDF figure styling -->
+  <!-- Figure image styling -->
   <style>
-    .paper-figure-pdf {
+    .paper-figure-img {
+      display: block;
       width: 100%;
-      height: 620px;
+      max-width: 100%;
+      height: auto;
       border: none;
       border-radius: 8px;
       background: #ffffff;
-    }
-
-    .paper-figure-pdf-small {
-      width: 100%;
-      height: 520px;
-      border: none;
-      border-radius: 8px;
-      background: #ffffff;
-    }
-
-    @media (max-width: 768px) {
-      .paper-figure-pdf {
-        height: 420px;
-      }
-
-      .paper-figure-pdf-small {
-        height: 380px;
-      }
+      margin: 0 auto;
     }
   </style>
 
@@ -306,7 +291,7 @@
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  Transactions on Machine Learning Research, 2026
+                  Transactions on Machine Learning Research (TMLR)
                 </span>
               </div>
 
@@ -409,12 +394,7 @@
             </div>
 
             <div class="figure-card">
-              <object class="paper-figure-pdf" data="static/images/1.pdf" type="application/pdf" aria-label="Figure 1: VT-DUDA overview">
-                <p>
-                  Your browser cannot display this PDF figure.
-                  <a href="static/images/1.pdf" target="_blank">Open Figure 1 PDF</a>.
-                </p>
-              </object>
+              <img class="paper-figure-img" src="static/images/1.jpg" alt="Figure 1: VT-DUDA overview">
               <p class="subtitle has-text-centered">
                 <strong>Figure 1.</strong> Overview of VT-DUDA. We jointly train domain-specific diffusion adapters and an image-to-token encoder on source and target images.
               </p>
@@ -515,24 +495,14 @@
         <h2 class="title is-3 has-text-centered">Additional Visual Results</h2>
 
         <div class="figure-card">
-          <object class="paper-figure-pdf" data="static/images/2.pdf" type="application/pdf" aria-label="Figure 2: Token-strength scaling for target-style synthesis">
-            <p>
-              Your browser cannot display this PDF figure.
-              <a href="static/images/2.pdf" target="_blank">Open Figure 2 PDF</a>.
-            </p>
-          </object>
+          <img class="paper-figure-img" src="static/images/2.jpg" alt="Figure 2: Token-strength scaling for target-style synthesis">
           <p class="subtitle has-text-centered">
             <strong>Figure 2.</strong> Token-strength scaling for target-style synthesis under Art → Clipart.
           </p>
         </div>
 
         <div class="figure-card">
-          <object class="paper-figure-pdf" data="static/images/3.pdf" type="application/pdf" aria-label="Figure 3: Token-subset manipulation under translation-based augmentation">
-            <p>
-              Your browser cannot display this PDF figure.
-              <a href="static/images/3.pdf" target="_blank">Open Figure 3 PDF</a>.
-            </p>
-          </object>
+          <img class="paper-figure-img" src="static/images/3.jpg" alt="Figure 3: Token-subset manipulation under translation-based augmentation">
           <p class="subtitle has-text-centered">
             <strong>Figure 3.</strong> Token-subset manipulation under translation-based augmentation for Real-World → Clipart.
           </p>

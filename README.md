@@ -1,40 +1,16 @@
 # VT-DUDA: Visual Token Conditioning for Diffusion-guided Unsupervised Domain Adaptation
 
-Official project page repository for:
+Official project page for:
 
 **VT-DUDA: Visual Token Conditioning for Diffusion-guided Unsupervised Domain Adaptation**
 
-**Authors:**
-Xuan Qi, Daniele Berardini, Dario Serez, Vito Paolo Pastore, Vittorio Murino
+**Xuan Qi, Daniele Berardini, Dario Serez, Vito Paolo Pastore, Vittorio Murino**
 
-**Affiliations:**
 AI for Good (AIGO), Istituto Italiano di Tecnologia
 University of Genoa
 University of Verona
 
-**Venue:** Transactions on Machine Learning Research, 2026
-
----
-
-## Project Page
-
-Project page:
-
-```text
-https://xuanqi99.github.io/VT-DUDA/
-```
-
-OpenReview page:
-
-```text
-https://openreview.net/forum?id=Y956680PCe
-```
-
-Paper PDF:
-
-```text
-https://openreview.net/pdf?id=Y956680PCe
-```
+**Transactions on Machine Learning Research (TMLR), 2026**
 
 ---
 
@@ -53,13 +29,8 @@ The core idea is to map each image into a compact sequence of visual tokens and 
 VT-DUDA contains three main stages:
 
 1. **Token-conditioned diffusion training**
-   We jointly train domain-specific diffusion adapters and an image-to-token encoder using labeled source images and unlabeled target images.
-
 2. **Target-style data generation**
-   For each labeled source image, VT-DUDA extracts visual tokens, combines them with the class prompt, and synthesizes target-style images under the target-domain adapter branch.
-
 3. **Downstream UDA training**
-   A classifier is trained on the generated labeled target-style dataset, optionally together with an unsupervised target regularizer.
 
 The same token-conditioned interface supports both:
 
@@ -83,33 +54,13 @@ Because the visual guidance is represented as an explicit token sequence, VT-DUD
   * Pure-noise target-style synthesis
   * DDIM-inversion-based target-style translation
 
-* Experiments on Office-31, Office-Home, and VisDA-2017 show that VT-DUDA improves average target-domain accuracy over strong discriminative and diffusion-based UDA baselines.
-
----
-
-## Figures
-
-The project page uses the following paper figures:
-
-```text
-static/images/1.pdf
-static/images/2.pdf
-static/images/3.pdf
-```
-
-Figure descriptions:
-
-* **Figure 1:** Overview of VT-DUDA.
-* **Figure 2:** Token-strength scaling for target-style synthesis.
-* **Figure 3:** Token-subset manipulation under translation-based augmentation.
+* Experiments on Office-31, Office-Home, and VisDA-2017 demonstrate consistent improvements over strong discriminative and diffusion-based UDA baselines.
 
 ---
 
 ## Main Results
 
 ### Full VT-DUDA Configuration
-
-The full configuration combines pure-noise target-style synthesis with inversion-based translation.
 
 | Method        | Office-Home Avg | Office-31 Avg | VisDA-2017 Mean |
 | ------------- | --------------: | ------------: | --------------: |
@@ -120,8 +71,6 @@ The full configuration combines pure-noise target-style synthesis with inversion
 
 ### Inversion-free Protocol
 
-The inversion-free protocol uses only pure-noise target-style generation.
-
 | Method        | Office-Home Avg | Office-31 Avg | VisDA-2017 Mean |
 | ------------- | --------------: | ------------: | --------------: |
 | MCC + VT-DUDA |           73.50 |         91.37 |           86.92 |
@@ -131,48 +80,28 @@ The inversion-free protocol uses only pure-noise target-style generation.
 
 ## Datasets
 
-VT-DUDA is evaluated on three standard UDA benchmarks:
+VT-DUDA is evaluated on:
 
-* **Office-31**
-* **Office-Home**
-* **VisDA-2017**
+* Office-31
+* Office-Home
+* VisDA-2017
 
-The reported metric is target-domain classification accuracy.
-
----
-
-## Implementation Notes
-
-The paper instantiates VT-DUDA on top of Stable Diffusion XL (SDXL). The VAE and text encoders are frozen, and lightweight adapter parameters are trained together with the image-to-token encoder.
-
-Main implementation settings:
-
-* Diffusion backbone: SDXL
-* Adapter type: LoRA-style domain-specific adaptation
-* Image-to-token encoder: ResNet-18
-* Default visual token count: `M = 10`
-* Office-31 / Office-Home generation budget: 50 images per class
-* VisDA-2017 generation budget: 1000 images per class
+Target-domain classification accuracy is used as the evaluation metric.
 
 ---
 
-## Repository Structure
+## Paper
 
-This repository currently hosts the project page.
+OpenReview:
 
 ```text
-VT-DUDA/
-├── index.html
-├── README.md
-├── .nojekyll
-└── static/
-    ├── css/
-    ├── js/
-    └── images/
-        ├── 1.pdf
-        ├── 2.pdf
-        ├── 3.pdf
-        └── favicon.ico
+https://openreview.net/forum?id=Y956680PCe
+```
+
+PDF:
+
+```text
+https://openreview.net/pdf?id=Y956680PCe
 ```
 
 ---
@@ -193,19 +122,7 @@ VT-DUDA/
 
 ## Acknowledgments
 
-The project page is based on the Academic Project Page Template, which was adapted from the Nerfies project page.
+This project page is built upon the Academic Project Page Template and the Nerfies project page.
 
 * Academic Project Page Template: https://github.com/eliahuhorwitz/Academic-project-page-template
 * Nerfies: https://nerfies.github.io/
-
----
-
-## Website License
-
-This project page follows the license of the Academic Project Page Template.
-
-The website source is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
-
-```text
-https://creativecommons.org/licenses/by-sa/4.0/
-```

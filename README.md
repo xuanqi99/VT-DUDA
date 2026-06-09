@@ -6,8 +6,8 @@ Official project page for:
 
 **Xuan Qi, Daniele Berardini, Dario Serez, Vito Paolo Pastore, Vittorio Murino**
 
-AI for Good (AIGO), Istituto Italiano di Tecnologia
-University of Genoa
+AI for Good (AIGO), Istituto Italiano di Tecnologia  
+University of Genoa  
 University of Verona
 
 **Transactions on Machine Learning Research (TMLR), 2026**
@@ -66,8 +66,8 @@ Because the visual guidance is represented as an explicit token sequence, VT-DUD
 | ------------- | --------------: | ------------: | --------------: |
 | MCC           |           72.24 |         89.61 |           83.32 |
 | ELS           |           71.84 |         90.21 |           83.40 |
-| MCC + VT-DUDA |           76.58 |         92.23 |           87.48 |
-| ELS + VT-DUDA |       **77.34** |     **92.84** |       **88.42** |
+| MCC + VT-DUDA |           76.25 |         91.53 |           87.48 |
+| ELS + VT-DUDA |       **76.74** |     **92.04** |       **88.42** |
 
 ### Inversion-free Protocol
 
@@ -87,22 +87,6 @@ VT-DUDA is evaluated on:
 * VisDA-2017
 
 Target-domain classification accuracy is used as the evaluation metric.
-
----
-
-## Paper
-
-OpenReview:
-
-```text
-https://openreview.net/forum?id=Y956680PCe
-```
-
-PDF:
-
-```text
-https://openreview.net/pdf?id=Y956680PCe
-```
 
 ---
 

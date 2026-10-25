@@ -12,6 +12,8 @@ University of Verona
 
 **Transactions on Machine Learning Research (TMLR), 2026**
 
+[Paper](https://openreview.net/forum?id=Y956680PCe) | [Project Page](https://xuanqi99.github.io/VT-DUDA/) | [Official Code](https://github.com/xuanqi99/VT-DUDA-Code)
+
 ---
 
 ## Overview
